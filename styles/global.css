@@ -1,0 +1,42 @@
+.custom-cursor {
+  z-index: 999;
+  position: fixed;
+
+  height: 2rem;
+  width: 2rem;
+
+  border: 2.5px solid #8f8f8f;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  transition: all 0.2s ease;
+  transition-property: background, border, transform;
+  transform-origin: 150% 150%;
+}
+
+@keyframes cursorAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.expand {
+  animation: cursorAnimation 0.3s forwards;
+}
+
+@media all and (max-width: 1024px) {
+  .custom-cursor {
+    display: none;
+  }
+  .expand {
+    display: none;
+  }
+}
