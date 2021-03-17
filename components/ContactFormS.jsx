@@ -162,7 +162,7 @@ export const ContactFormTextArea = styled.textarea`
 
   font-family: ${typeface.poppins};
   font-size: ${typeface.$copyrightfont};
-  padding-left: 1rem;
+  padding-left: 0.9rem;
 
   background-color: ${color.$white};
 
@@ -231,6 +231,7 @@ export const ContactFormButton = styled.button`
   transition: all 250ms ease-in-out;
 
   margin-bottom: 4rem;
+  margin-top: 0.5rem;
 
   @media (max-width: ${media.laptopS}) {
     cursor: pointer;
@@ -239,7 +240,7 @@ export const ContactFormButton = styled.button`
 
 // Error Messages
 export const ErrorField = styled.h1`
-  font-size: ${typeface.$copyrightfont};
+  font-size: ${typeface.$mqcopyrightfont2};
   font-weight: ${typeface.$medium};
   color: ${color.$red};
 
@@ -251,7 +252,7 @@ export const ErrorField = styled.h1`
 
 // Success Message
 export const SuccessField = styled.h1`
-  font-size: ${typeface.$copyrightfont};
+  font-size: ${typeface.$mqcopyrightfont1};
   font-weight: ${typeface.$medium};
   color: ${color.$green};
 

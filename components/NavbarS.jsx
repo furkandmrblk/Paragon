@@ -107,7 +107,7 @@ export const NavMenu = styled.div`
   position: absolute;
   display: ${({ open }) => (open ? 'flex' : 'hidden')};
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 
   background-color: ${color.$black};
@@ -118,6 +118,10 @@ export const NavMenu = styled.div`
   transition: all 800ms ease-in-out;
 
   top: 0;
+
+  @media (max-width: ${media.tablet}) {
+    justify-content: flex-start;
+  }
 `;
 
 // NavItems
