@@ -30,7 +30,7 @@ export const WorkTitle = styled.a`
   margin-bottom: 10rem;
 
   @media (max-width: ${media.laptopL}) {
-    font-size: ${typeface.$mqlg2font};
+    font-size: ${typeface.$mqlg3font};
     max-width: 45rem;
   }
   @media (max-width: ${media.laptopM}) {
@@ -42,23 +42,19 @@ export const WorkTitle = styled.a`
     max-width: 25rem;
   }
   @media (max-width: ${media.tablet}) {
-    font-size: ${typeface.$mqlg5font};
+    font-size: ${typeface.$mqlg6font};
     max-width: 25rem;
   }
   @media (max-width: 550px) {
-    font-size: ${typeface.$mqlg6font};
+    font-size: ${typeface.$mqlg8font};
     max-width: 20rem;
   }
   @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqlg7font};
+    font-size: ${typeface.$mqmd5font};
     max-width: 18rem;
   }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqlg8font};
-    max-width: 17rem;
-  }
-  @media (max-width: ${media.mobileS}) {
-    font-size: ${typeface.$mqlg9font};
-    max-width: 15rem;
+    font-size: ${typeface.$mqmd6font};
+    max-width: 13rem;
   }
 `;

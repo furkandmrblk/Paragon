@@ -23,23 +23,24 @@ export const Navbar = () => {
       document.body.style.overflow = '';
     }
 
-    if (window.location.href === 'http://localhost:3000/work') {
+    if (window.location.pathname === '/work') {
       document.getElementById('logo').style.color = '#FDFDFD';
       document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
       document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
-    } else if (window.location.href === 'http://localhost:3000/contact') {
+      document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
+      document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
+    } else if (window.location.pathname === '/contact') {
       document.getElementById('logo').style.color = '#FDFDFD';
       document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
       document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
-    } else if (window.location.href === 'http://localhost:3000/') {
-      if (scrollY >= 877) {
+    } else if (window.location.pathname === '/') {
+      document.getElementById('logo').style.color = '#151515';
+      if (open) {
         document.getElementById('logo').style.color = '#FDFDFD';
-      } else {
-        document.getElementById('logo').style.color = '#151515';
-        if (open) {
-          document.getElementById('logo').style.color = '#FDFDFD';
-        }
       }
+    } else if (window.location.pathname === '/about') {
+      document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
+      document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
     }
   });
 
