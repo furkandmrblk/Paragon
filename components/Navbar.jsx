@@ -28,12 +28,13 @@ export const Navbar = () => {
     if (window.location.pathname === '/work') {
       document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
       document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
-      document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
-      document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
+
+      document.getElementById('hamburger').style.backgroundColor = '#FDFDFD';
+      document.getElementById('hamburger2').style.backgroundColor = '#FDFDFD';
     } else if (window.location.pathname === '/contact') {
       if (open === true) {
-        document.getElementById('hamburger').style.border = '1px solid#fdfdfd';
-        document.getElementById('hamburger2').style.border = '1px solid#fdfdfd';
+        document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
+        document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
       } else if (open === false) {
         document.getElementById('hamburger').style.border = '1px solid#151515';
         document.getElementById('hamburger2').style.border = '1px solid#151515';
@@ -41,6 +42,8 @@ export const Navbar = () => {
     } else if (window.location.pathname === '/about') {
       document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
       document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
+      document.getElementById('hamburger').style.backgroundColor = '#FDFDFD';
+      document.getElementById('hamburger2').style.backgroundColor = '#FDFDFD';
     }
   });
 

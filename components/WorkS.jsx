@@ -7,8 +7,10 @@ import { media } from '../theme/MediaQueries';
 export const WorkDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  min-height: 100vh;
 
   background-color: ${color.$black};
 `;
