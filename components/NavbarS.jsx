@@ -15,41 +15,12 @@ export const Nav = styled.div`
 export const NavDiv = styled.div`
   z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 
   width: 100vw;
 
   padding: 1.5rem 0 0 0;
-`;
-
-// Logo
-export const NavLogo = styled.h1`
-  font-size: ${typeface.$smfont};
-  font-family: ${typeface.oswald};
-  color: ${color.$white};
-
-  cursor: none;
-  user-select: none;
-
-  transition: color 500ms ease-in-out;
-
-  @media (max-width: ${media.laptopS}) {
-    cursor: pointer;
-  }
-
-  margin-left: 4rem;
-
-  @media (max-width: ${media.laptopL}) {
-    font-size: ${typeface.$mqsmfont1};
-  }
-  @media (min-width: 550px) and (max-width: ${media.tablet}) {
-    font-size: ${typeface.$mqsmfont2};
-    margin-left: 2rem;
-  }
-  @media (max-width: 550px) {
-    margin-left: 1rem;
-  }
 `;
 
 // Hamburger
@@ -128,7 +99,7 @@ export const NavMenu = styled.div`
 
 export const NavItems = styled.h1`
   font-size: ${typeface.$mdfont};
-  font-weight: ${typeface.$medium};
+  font-weight: ${typeface.$light};
   color: ${color.$white};
 
   white-space: nowrap;
@@ -141,8 +112,6 @@ export const NavItems = styled.h1`
   }
 
   transition: all 350ms ease-in-out;
-
-  margin-left: 4rem;
 
   @media (max-width: ${media.laptopL}) {
     font-size: ${typeface.$mqmd1font};
@@ -160,7 +129,6 @@ export const NavItems = styled.h1`
   }
   @media (max-width: 550px) {
     font-size: ${typeface.$mqmd5font};
-    margin-left: 1rem;
   }
   @media (max-width: ${media.mobileL}) {
     font-size: ${typeface.$mqmd6font};
@@ -173,56 +141,68 @@ export const NavItems = styled.h1`
   }
 `;
 
-export const NavItemDiv = styled.a`
+export const NavItemDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+
+  padding: 0 4rem;
+
+  @media (max-width: ${media.tablet}) {
+    padding: 0 2rem;
+
+    &:first-child {
+      margin-top: 5rem;
+    }
+  }
+`;
+
+export const NavItemLine = styled.div`
+  display: ${({ open }) => (open ? 'visible' : 'none')};
+  height: 0;
+  width: 90vw;
+
+  border: 0.5px solid ${color.$white};
+`;
+
+export const NavItemInnerDiv = styled.a`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: 75vw;
+  width: 90vw;
 
   &:first-child {
     margin-top: 10.3125rem;
   }
 
   svg {
-    height: 6rem;
-    width: 12.5rem;
+    height: 2.5rem;
+    width: 6rem;
+    margin-bottom: 2rem;
 
     display: ${({ open }) => (open ? 'block' : 'none')};
 
-    @media (max-width: ${media.laptopL}) {
-      height: 5.5rem;
-      width: 11.5rem;
-    }
-
     @media (max-width: ${media.laptopM}) {
-      height: 4rem;
-      width: 8.5rem;
-      margin-bottom: 2rem;
+      height: 2.2rem;
+      width: 6rem;
     }
 
     @media (max-width: ${media.laptopS}) {
-      height: 3rem;
-      width: 6.1rem;
-      margin-bottom: 2rem;
+      height: 2rem;
+      width: 5rem;
     }
     @media (min-width: 550px) and (max-width: ${media.tablet}) {
-      height: 2rem;
-      width: 4rem;
-      margin-bottom: 2rem;
+      height: 1.5rem;
+      width: 3rem;
     }
     @media (max-width: 550px) {
-      height: 1.7rem;
-      width: 3.6rem;
-      margin-bottom: 2rem;
+      height: 1.2rem;
+      width: 2.5rem;
     }
-    @media (max-width: ${media.mobileM}) {
-      margin-bottom: 2.3rem;
-    }
-    @media (max-width: ${media.mobileS}) {
-      height: 1.5rem;
-      width: 3.2rem;
-    }
+
     path {
       transition: all 350ms ease-in-out;
     }
@@ -235,7 +215,7 @@ export const NavItemDiv = styled.a`
 
     svg {
       path {
-        fill: #8f8f8f;
+        stroke: #8f8f8f;
       }
     }
   }

@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Contact } from '../components/Contact';
-import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { WorkDiv, WorkTitle } from '../components/WorkS';
 
@@ -38,7 +36,6 @@ export default function WorkPage({ posts }) {
           </Link>
         </WorkDiv>
       ))}
-      <Footer />
     </>
   );
 }

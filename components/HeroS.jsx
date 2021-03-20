@@ -154,6 +154,7 @@ export const HeroButton = styled.button`
 
   font-family: ${typeface.poppins};
   font-size: ${typeface.$textfont};
+  font-weight: ${typeface.$thin};
   text-align: center;
 
   svg {

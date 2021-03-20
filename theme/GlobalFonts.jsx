@@ -7,6 +7,7 @@ export const baseFontSize = '16px !default';
 export const baseLineHeight = '1.5 !default';
 
 // Font Weights
+export const $thin = 200;
 export const $light = 300;
 export const $regular = 400;
 export const $medium = 500;
@@ -58,6 +59,7 @@ export const $mqtext2font = '1.2rem';
 export const $mqtext3font = '1.1rem';
 export const $mqtext4font = '1rem';
 export const $mqtext5font = '0.9rem';
+export const $mqtext6font = '0.7rem';
 
 // MQ Copyright
 export const $mqcopyrightfont1 = '0.8rem';

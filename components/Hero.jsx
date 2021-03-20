@@ -44,7 +44,7 @@ export const Hero = () => {
     <HeroDiv>
       <IntroScreen ref={(el) => (Intro = el)}>
         <IntroTitle ref={(el) => (IntroText = el)}>
-          WE BUILD PRODUCTS <br /> THAT{' '}
+          WE DESIGN THINGS <br /> THAT{' '}
           <span
             style={{ color: 'transparent', WebkitTextStroke: '0.6px #FDFDFD' }}
           >

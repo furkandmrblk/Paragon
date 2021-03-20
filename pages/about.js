@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { Navbar } from '../components/Navbar';
 import { About } from '../components/About';
-import { Contact } from '../components/Contact';
-import { Footer } from '../components/Footer';
 
 export default function AboutPage() {
   return (
@@ -21,8 +19,6 @@ export default function AboutPage() {
       </Head>
       <Navbar />
       <About />
-      <Contact />
-      <Footer />
     </>
   );
 }

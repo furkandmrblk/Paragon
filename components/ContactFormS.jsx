@@ -100,162 +100,304 @@ export const ContactFormText = styled.h1`
   }
 `;
 
-// ContactForm Input
-export const ContactFormInputDiv = styled.form`
+// ContactBottomDiv
+export const ContactBottomDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  width: 100vw;
+
+  background-color: ${color.$white};
+
+  padding-top: 10.5rem;
+  padding-bottom: 10.5rem;
+
+  @media (max-width: ${media.laptopL}) {
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+  }
+  @media (max-width: ${media.laptopS}) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+`;
+
+// ContactBottomLeft
+export const ContactBottomLeft = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 `;
-export const ContactFormInput = styled.input`
-  height: 3.0625rem;
-  width: 25.3125rem;
 
-  font-size: ${typeface.$copyrightfont};
-  padding-left: 1rem;
+export const ContactLeftTitle = styled.h1`
+  font-size: ${typeface.$mdfont};
+  font-weight: ${typeface.$medium};
 
-  background-color: ${color.$white};
+  color: transparent;
+  -webkit-text-stroke: 1.2px ${color.$black};
 
-  border-bottom: 1px solid ${color.$lightgray};
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  user-select: none;
 
-  &:focus,
-  input:focus {
-    outline: none;
+  margin-bottom: 12.6rem;
+
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqmd1font};
   }
-
-  &::-webkit-input-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
+  @media (max-width: ${media.laptopM}) {
+    font-size: ${typeface.$mqmd2font};
   }
-  &:-ms-input-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
-  }
-  &:-moz-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
-  }
-  &::-moz-placeholder {
-    color: #c3c2c2;
-    font-size: ${typeface.$copyrightfont};
-  }
-
-  margin-bottom: 2.2rem;
-
-  @media (max-width: ${media.mobileL}) {
-    width: 20.3125rem;
-  }
-  @media (max-width: ${media.mobileM}) {
-    width: 17.3125rem;
-  }
-  @media (max-width: ${media.mobileS}) {
-    width: 15.3125rem;
-  }
-`;
-
-export const ContactFormTextArea = styled.textarea`
-  height: 3.0625rem;
-  width: 25.3125rem;
-
-  font-family: ${typeface.poppins};
-  font-size: ${typeface.$copyrightfont};
-  padding-left: 0.9rem;
-
-  background-color: ${color.$white};
-
-  border-bottom: 1px solid ${color.$lightgray};
-  border-top: none;
-  border-right: none;
-  border-left: none;
-
-  overflow: hidden;
-
-  &:focus,
-  input:focus {
-    outline: none;
-  }
-
-  resize: none;
-
-  &::-webkit-input-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
-  }
-  &:-ms-input-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
-  }
-  &:-moz-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
-  }
-  &::-moz-placeholder {
-    color: ${color.$lightgray};
-    font-size: ${typeface.$copyrightfont};
-  }
-
-  margin-bottom: 2.2rem;
-
-  @media (max-width: ${media.mobileL}) {
-    width: 20.3125rem;
-  }
-  @media (max-width: ${media.mobileM}) {
-    width: 17.3125rem;
-  }
-  @media (max-width: ${media.mobileS}) {
-    width: 15.3125rem;
-  }
-`;
-
-export const ContactFormButton = styled.button`
-  height: 3.0625rem;
-  width: 8rem;
-
-  font-family: ${typeface.poppins};
-  font-size: ${typeface.$copyrightfont};
-
-  color: ${color.$white};
-
-  background-color: ${color.$black};
-
-  border: 1px solid ${color.$lightgray};
-  border-radius: 5px;
-
-  &:active {
-    transform: scale(1.05);
-  }
-
-  transition: all 250ms ease-in-out;
-
-  margin-bottom: 4rem;
-  margin-top: 0.5rem;
-
   @media (max-width: ${media.laptopS}) {
-    cursor: pointer;
+    font-size: ${typeface.$mqmd3font};
+  }
+  @media (min-width: 550px) and (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqmd4font};
+  }
+  @media (max-width: 550px) {
+    font-size: ${typeface.$mqmd5font};
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqmd7font};
+  }
+  @media (max-width: ${media.mobileS}) {
+    font-size: ${typeface.$mqmd6font};
+  }
+  @media (max-width: 550px) {
+    margin-bottom: 5rem;
   }
 `;
 
-// Error Messages
-export const ErrorField = styled.h1`
-  font-size: ${typeface.$mqcopyrightfont2};
-  font-weight: ${typeface.$medium};
-  color: ${color.$red};
+export const ContactLeftLine = styled.div`
+  height: 0px;
+  width: 40rem;
 
-  margin-top: -1.8rem;
+  border: 1px solid ${color.$gray};
 
-  text-align: left;
-  user-select: none;
+  margin-bottom: 12.6rem;
+
+  @media (max-width: ${media.laptopL}) {
+    width: 30rem;
+  }
+  @media (max-width: ${media.laptopM}) {
+    width: 24.5rem;
+  }
+  @media (max-width: ${media.laptopS}) {
+    width: 20rem;
+  }
+  @media (max-width: ${media.tablet}) {
+    width: 14.5rem;
+  }
+  @media (max-width: 550px) {
+    display: none;
+  }
 `;
 
-// Success Message
-export const SuccessField = styled.h1`
-  font-size: ${typeface.$mqcopyrightfont1};
-  font-weight: ${typeface.$medium};
-  color: ${color.$green};
+export const ContactLeftSocialDiv = styled.div`
+  display: flex;
+  align-items: center;
 
-  text-align: left;
+  @media (max-width: 550px) {
+    display: none;
+  }
+`;
+export const ContactLeftSocial = styled.a`
+  font-size: ${typeface.$smfont};
+  font-weight: ${typeface.$thin};
+  color: ${color.$black};
+
   user-select: none;
+
+  &:hover {
+    color: ${color.$lightgray};
+  }
+
+  transition: all 350ms ease-in-out;
+
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqsmfont1};
+  }
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqsmfont2};
+  }
+  @media (min-width: 550px) and (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqsmfont3};
+  }
+  @media (max-width: 550px) {
+    font-size: ${typeface.$mqsmfont3};
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqsmfont4};
+  }
+`;
+
+// ContactBottomRight
+export const ContactBottomRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
+export const ContactRightTitle = styled.h1`
+  font-size: ${typeface.$copyrightfont};
+  font-weight: ${typeface.$light};
+  color: ${color.$gray};
+
+  user-select: none;
+
+  &:first-child {
+    margin-top: 2.6rem;
+  }
+
+  &:hover {
+    color: ${color.$lightgray};
+  }
+
+  transition: all 350ms ease-in-out;
+
+  @media (max-width: ${media.laptopL}) {
+    &:first-child {
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: ${media.laptopM}) {
+    &:first-child {
+      margin-top: 1.5rem;
+    }
+  }
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqcopyrightfont1};
+    &:first-child {
+      margin-top: 1.3rem;
+    }
+  }
+  @media (max-width: ${media.tablet}) {
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqcopyrightfont2};
+  }
+`;
+
+export const ContactRightInformation = styled.a`
+  font-size: ${typeface.$mqtext2font};
+  font-weight: ${typeface.$thin};
+  color: ${color.$black};
+
+  margin-top: 1rem;
+  &:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqtext3font};
+
+    &:not(:last-child) {
+      margin-bottom: 9.4rem;
+    }
+  }
+  @media (max-width: ${media.laptopM}) {
+    font-size: ${typeface.$mqtext4font};
+    &:not(:last-child) {
+      margin-bottom: 8.9rem;
+    }
+  }
+  @media (max-width: ${media.laptopS}) {
+    &:last-child {
+      cursor: pointer;
+    }
+    &:not(:last-child) {
+      margin-bottom: 8.8rem;
+    }
+  }
+  @media (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqtext5font};
+    &:not(:last-child) {
+      margin-bottom: 8.6rem;
+    }
+  }
+  @media (max-width: 550px) {
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqtext6font};
+  }
+`;
+
+export const ContactMobileDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  width: 100vw;
+
+  @media (max-width: 550px) {
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+`;
+
+export const ContactMobileSocialDiv = styled.div`
+  display: none;
+  @media (max-width: 550px) {
+    display: flex;
+    align-items: center;
+
+    margin-top: 5rem;
+  }
+`;
+
+export const ContactMobileSocial = styled.a`
+  display: none;
+  @media (max-width: 550px) {
+    display: block;
+    font-size: ${typeface.$mqsmfont4};
+    font-weight: ${typeface.$thin};
+    color: ${color.$black};
+
+    user-select: none;
+
+    &:hover {
+      color: ${color.$lightgray};
+    }
+
+    transition: all 350ms ease-in-out;
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqtext6font};
+  }
+`;
+
+// Spans
+
+export const ContactSpan = styled.span`
+  font-size: ${typeface.$smfont};
+  font-weight: ${typeface.$thin};
+  color: ${color.$black};
+
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqsmfont1};
+  }
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqsmfont2};
+  }
+  @media (min-width: 550px) and (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqsmfont3};
+  }
+`;
+
+export const ContactMobileSpan = styled.span`
+  font-size: ${typeface.$mqsmfont4};
+  color: ${color.$black};
+
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqtext6font};
+  }
 `;
