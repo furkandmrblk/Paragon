@@ -121,6 +121,10 @@ export const ContactBottomDiv = styled.div`
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
+  @media (max-width: ${media.mobileM}) {
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+  }
 `;
 
 // ContactBottomLeft
