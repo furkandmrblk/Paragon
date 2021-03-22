@@ -10,7 +10,7 @@ export const ContactFormDiv = styled.div`
   justify-content: center;
   align-items: center;
 
-  overflow: hidden;
+  height: 100vh;
 `;
 
 // ContactForm Intro
@@ -111,11 +111,11 @@ export const ContactBottomDiv = styled.div`
   background-color: ${color.$white};
 
   padding-top: 10.5rem;
-  padding-bottom: 10.5rem;
+  padding-bottom: 8.5rem;
 
   @media (max-width: ${media.laptopL}) {
-    padding-top: 8.5rem;
-    padding-bottom: 8.5rem;
+    padding-top: 11.5rem;
+    padding-bottom: 5rem;
   }
   @media (max-width: ${media.laptopS}) {
     padding-top: 8rem;
@@ -156,6 +156,7 @@ export const ContactLeftTitle = styled.h1`
   }
   @media (max-width: 550px) {
     font-size: ${typeface.$mqmd5font};
+    -webkit-text-stroke: 1px ${color.$black};
   }
   @media (max-width: ${media.mobileM}) {
     font-size: ${typeface.$mqmd7font};
@@ -292,6 +293,14 @@ export const ContactRightInformation = styled.a`
     margin-bottom: 10rem;
   }
 
+  &:last-child {
+    &:hover {
+      color: ${color.$lightgray};
+    }
+
+    transition: all 350ms ease-in-out;
+  }
+
   @media (max-width: ${media.laptopL}) {
     font-size: ${typeface.$mqtext3font};
 
@@ -382,6 +391,8 @@ export const ContactSpan = styled.span`
   font-weight: ${typeface.$thin};
   color: ${color.$black};
 
+  margin: 0 0.3rem;
+
   @media (max-width: ${media.laptopL}) {
     font-size: ${typeface.$mqsmfont1};
   }
@@ -390,6 +401,7 @@ export const ContactSpan = styled.span`
   }
   @media (min-width: 550px) and (max-width: ${media.tablet}) {
     font-size: ${typeface.$mqsmfont3};
+    margin: 0 0.1rem;
   }
 `;
 
@@ -397,7 +409,52 @@ export const ContactMobileSpan = styled.span`
   font-size: ${typeface.$mqsmfont4};
   color: ${color.$black};
 
+  margin: 0 0.2rem;
+
   @media (max-width: ${media.mobileM}) {
     font-size: ${typeface.$mqtext6font};
+  }
+`;
+
+// Legals
+export const LegalDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100vw;
+
+  bottom: 0;
+
+  background-color: ${color.$white};
+  color: ${color.$gray};
+
+  padding: 0rem 1rem 1rem 1rem;
+
+  @media (max-width: 550px) {
+    justify-content: center;
+  }
+`;
+
+export const LegalItem = styled.a`
+  font-size: ${typeface.$mqcopyrightfont1};
+
+  &:first-child {
+    margin-right: 3.5rem;
+  }
+
+  &:hover {
+    color: ${color.$lightgray};
+  }
+
+  transition: all 350ms ease-in-out;
+
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqcopyrightfont2};
+  }
+  @media (max-width: ${media.mobileM}) {
+    &:first-child {
+      margin-right: 2rem;
+    }
   }
 `;

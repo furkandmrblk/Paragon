@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import * as color from '../theme/GlobalColors';
 import * as typeface from '../theme/GlobalFonts';
 import {
@@ -25,6 +26,8 @@ import {
   ContactRightTitle,
   ContactSpan,
   ErrorField,
+  LegalDiv,
+  LegalItem,
   SuccessField,
 } from './ContactFormS';
 
@@ -91,6 +94,10 @@ export const ContactForm = () => {
           </ContactMobileSocialDiv>
         </ContactMobileDiv>
       </ContactBottomDiv>
+      <LegalDiv>
+        <LegalItem>LEGALS</LegalItem>
+        <LegalItem>ALL RIGHTS RESERVED</LegalItem>
+      </LegalDiv>
     </ContactFormDiv>
   );
 };

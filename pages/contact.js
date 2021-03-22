@@ -16,7 +16,7 @@ export default function ContactUs() {
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <title>Paragon</title>
+        <title>Paragon Design Studio | Contact Us</title>
       </Head>
       <Navbar />
       <ContactForm />

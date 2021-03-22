@@ -35,9 +35,13 @@ export const Navbar = () => {
       if (open === true) {
         document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
         document.getElementById('hamburger2').style.border = '1px solid#FDFDFD';
+        document.getElementById('hamburger').style.backgroundColor = '#FDFDFD';
+        document.getElementById('hamburger2').style.backgroundColor = '#FDFDFD';
       } else if (open === false) {
         document.getElementById('hamburger').style.border = '1px solid#151515';
         document.getElementById('hamburger2').style.border = '1px solid#151515';
+        document.getElementById('hamburger').style.backgroundColor = '#151515';
+        document.getElementById('hamburger2').style.backgroundColor = '#151515';
       }
     } else if (window.location.pathname === '/about') {
       document.getElementById('hamburger').style.border = '1px solid#FDFDFD';
