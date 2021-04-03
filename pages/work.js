@@ -1,3 +1,7 @@
+export default function WorkPage() {
+  return <div>workpage</div>;
+}
+
 // import Head from 'next/head';
 // import Link from 'next/link';
 // import { Navbar } from '../components/Navbar';

@@ -1,3 +1,7 @@
+export default function ProjectPage() {
+  return <div>projectpage</div>;
+}
+
 // import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 // import { BLOCKS } from '@contentful/rich-text-types';
 // import Head from 'next/head';
