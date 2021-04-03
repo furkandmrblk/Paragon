@@ -4,13 +4,13 @@ import Link from 'next/link';
 import {
   HeroBackgroundRight,
   HeroBackgroundLeft,
-  HeroButton,
   HeroDiv,
+  HeroRightDiv,
   HeroLine,
   HeroTitle,
-  HeroTitleWrap,
   IntroScreen,
   IntroTitle,
+  IntroDiv,
 } from './HeroS';
 
 export const Hero = () => {
@@ -43,41 +43,34 @@ export const Hero = () => {
   return (
     <HeroDiv>
       <IntroScreen ref={(el) => (Intro = el)}>
-        <IntroTitle ref={(el) => (IntroText = el)}>
-          WE DESIGN THINGS <br /> THAT{' '}
-          <span
-            style={{ color: 'transparent', WebkitTextStroke: '0.6px #FDFDFD' }}
-          >
-            STAND OUT
-          </span>
-        </IntroTitle>
+        <IntroDiv>
+          <IntroTitle ref={(el) => (IntroText = el)}>
+            <span
+              style={{
+                color: 'transparent',
+                WebkitTextStroke: '0.6px #FDFDFD',
+              }}
+            >
+              STAND OUT <br />
+            </span>
+            FROM THE CROWD{' '}
+            <span
+              style={{
+                color: 'transparent',
+                WebkitTextStroke: '0.6px #FDFDFD',
+              }}
+            >
+              .
+            </span>
+          </IntroTitle>
+        </IntroDiv>
       </IntroScreen>
       <HeroBackgroundRight>
-        <HeroTitleWrap>HEY! WE ARE</HeroTitleWrap>
-        <HeroTitle>PARAGON</HeroTitle>
-        <HeroLine />
-        <Link href="/about">
-          <HeroButton>
-            Learn about us
-            <svg
-              width="14"
-              height="23"
-              viewBox="0 0 14 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.61914 1.08477L12.2539 11.0391L1.61914 20.9934"
-                stroke="#333333"
-                strokeWidth="2.13307"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </HeroButton>
-        </Link>
+        <HeroRightDiv>
+          <HeroTitle>PARAGON</HeroTitle>
+          <HeroLine />
+        </HeroRightDiv>
       </HeroBackgroundRight>
-
       <HeroBackgroundLeft />
     </HeroDiv>
   );

@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     background-color: ${color.$white};
     color: ${color.$black};
     overflow-x: hidden;

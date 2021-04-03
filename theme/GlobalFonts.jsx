@@ -13,18 +13,13 @@ export const $regular = 400;
 export const $medium = 500;
 export const $semiBold = 600;
 
-// Font Sizes Hero / Title
+// Font Sizes
 export const $lgfont = '13rem';
 export const $mdfont = '8rem';
-
-// Font Size Navbar
-export const $smfont = '1.875rem';
-
-// Font Size Text
-export const $textfont = '1.5rem';
+export const $smfont = '4.375rem';
 
 // Font Copyright
-export const $copyrightfont = '1rem';
+export const $subtitle = '2.8125rem';
 
 // MQ Hero / Title
 export const $mqlg1font = '9.75rem';
@@ -47,20 +42,22 @@ export const $mqmd7font = '2.5rem';
 export const $mqmd8font = '1.8rem';
 export const $mqmd9font = '1.6rem';
 
-// MQ Navbar
-export const $mqsmfont1 = '1.5rem';
-export const $mqsmfont2 = '1.3rem';
-export const $mqsmfont3 = '1rem';
-export const $mqsmfont4 = '0.9rem';
+// MQ Small Font
+export const $mqsm1font = '4rem';
+export const $mqsm2font = '3.3rem';
+export const $mqsm3font = '2.8rem';
+export const $mqsm4font = '2rem';
+export const $mqsm5font = '1.3rem';
+export const $mqsm6font = '0.9rem';
+export const $mqsm7font = '0.8rem';
+export const $mqsm8font = '0.62rem';
 
-// MQ Text
-export const $mqtext1font = '1.3rem';
-export const $mqtext2font = '1.2rem';
-export const $mqtext3font = '1.1rem';
-export const $mqtext4font = '1rem';
-export const $mqtext5font = '0.9rem';
-export const $mqtext6font = '0.7rem';
-
-// MQ Copyright
-export const $mqcopyrightfont1 = '0.8rem';
-export const $mqcopyrightfont2 = '0.6rem';
+// MQ Subtitle Font
+export const $mqsubtitle1font = '2.4125rem';
+export const $mqsubtitle2font = '2.125rem';
+export const $mqsubtitle3font = '1.8125rem';
+export const $mqsubtitle4font = '1.5125rem';
+export const $mqsubtitle5font = '1.2125rem';
+export const $mqsubtitle6font = '0.8125rem';
+export const $mqsubtitle7font = '0.7125rem';
+export const $mqsubtitle8font = '0.6125rem';

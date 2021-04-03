@@ -1,33 +1,46 @@
 import React from 'react';
-import { AboutDiv, AboutIntro, AboutText } from './AboutS';
+import {
+  AboutContainer,
+  AboutLandingPage,
+  AboutSocials,
+  AboutSocialsDiv,
+  AboutSubtitle,
+  AboutText,
+} from './AboutS';
 
 export const About = () => {
   return (
-    <AboutDiv>
-      <AboutIntro>
-        <AboutText>
-          We Transform <br />{' '}
-          <span style={{ color: `#6a6a6b32` }}>
-            Brands with <br /> Design
-          </span>
-          .
+    <AboutContainer>
+      <AboutLandingPage>
+        <AboutText>Hello.</AboutText>
+        <AboutText>We are Paragon, an independent design</AboutText>
+        <AboutText style={{ marginBottom: '1rem' }}>
+          studio based in Mexico City.
         </AboutText>
-        <svg
-          width="14"
-          height="23"
-          viewBox="0 0 14 23"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.61914 1.08477L12.2539 11.0391L1.61914 20.9934"
-            stroke="#8f8f8f"
-            strokeWidth="2.13307"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </AboutIntro>
-    </AboutDiv>
+      </AboutLandingPage>
+      <AboutSubtitle>Services</AboutSubtitle>
+      <AboutText> Visual identity</AboutText>
+      <AboutText> Packaging</AboutText>
+      <AboutText> Books & Magazines</AboutText>
+      <AboutText> Printed Material</AboutText>
+      <AboutText> Creative Writing</AboutText>
+      <AboutText> UI Design</AboutText>
+      <AboutText> UX Design</AboutText>
+      <AboutText> UI Design</AboutText>
+      <AboutText> Posters</AboutText>
+      <AboutText> Typography</AboutText>
+      <AboutText> Naming</AboutText>
+      <AboutSubtitle>Famous Clients</AboutSubtitle>
+      <AboutText> WWF</AboutText>
+      <AboutText> Oxxo</AboutText>
+      <AboutText> Inmedic</AboutText>
+      <AboutText> Varega</AboutText>
+      <AboutSubtitle>Social</AboutSubtitle>
+      <AboutSocialsDiv>
+        <AboutSocials>Dribbble </AboutSocials>
+        <AboutText> - </AboutText>
+        <AboutSocials> Behance</AboutSocials>
+      </AboutSocialsDiv>
+    </AboutContainer>
   );
 };

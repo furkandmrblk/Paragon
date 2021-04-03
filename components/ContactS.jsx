@@ -3,27 +3,21 @@ import * as color from '../theme/GlobalColors';
 import * as typeface from '../theme/GlobalFonts';
 import { media } from '../theme/MediaQueries';
 
-// About Container
-export const AboutContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  padding: 0rem 3.75rem;
-`;
-
-export const AboutLandingPage = styled.div`
+// Contact Container
+export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
 
   height: 100vh;
+  width: 100vw;
+
+  padding: 0rem 3.75rem;
 `;
 
-// About Text
-export const AboutText = styled.h1`
+// Contact Text
+export const ContactText = styled.h1`
   font-size: ${typeface.$smfont};
   font-weight: ${typeface.$light};
 
@@ -53,55 +47,19 @@ export const AboutText = styled.h1`
   }
 `;
 
-// About Subtitle
-export const AboutSubtitle = styled.h1`
-  font-size: ${typeface.$subtitle};
-  font-weight: ${typeface.$light};
-  color: ${color.$gray};
-
-  margin-top: 4.375rem;
-
-  @media (max-width: 1510px) {
-    font-size: ${typeface.$mqsubtitle1font};
-  }
-  @media (max-width: ${media.laptopL}) {
-    font-size: ${typeface.$mqsubtitle2font};
-  }
-  @media (max-width: ${media.laptopM}) {
-    font-size: ${typeface.$mqsubtitle3font};
-  }
-  @media (max-width: ${media.laptopS}) {
-    font-size: ${typeface.$mqsubtitle4font};
-  }
-  @media (max-width: ${media.tablet}) {
-    font-size: ${typeface.$mqsubtitle5font};
-  }
-  @media (max-width: 550px) {
-    font-size: ${typeface.$mqsubtitle6font};
-  }
-  @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsubtitle7font};
-  }
-  @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsubtitle8font};
-  }
-`;
-
-// About Socials
-export const AboutSocialsDiv = styled.div`
+// Contact Socials
+export const ContactSocialsDiv = styled.div`
   display: flex;
   align-items: center;
 
-  margin-bottom: 1rem;
+  @media (max-width: ${media.mobileL}) {
+    margin-bottom: 1rem;
+  }
 `;
 
-export const AboutSocials = styled.a`
+export const ContactSocials = styled.a`
   font-size: ${typeface.$smfont};
   font-weight: ${typeface.$light};
-
-  &:first-child {
-    margin-right: 0.5rem;
-  }
 
   &:hover {
     color: ${color.$lightgray};
