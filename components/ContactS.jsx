@@ -53,13 +53,14 @@ export const ContactSocialsDiv = styled.div`
   align-items: center;
 
   @media (max-width: ${media.mobileL}) {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
   }
 `;
 
 export const ContactSocials = styled.a`
   font-size: ${typeface.$smfont};
   font-weight: ${typeface.$light};
+  color: ${color.$black};
 
   &:hover {
     color: ${color.$lightgray};

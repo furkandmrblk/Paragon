@@ -14,7 +14,7 @@ export const About = () => {
       <AboutLandingPage>
         <AboutText>Hello.</AboutText>
         <AboutText>We are Paragon, an independent design</AboutText>
-        <AboutText style={{ marginBottom: '1rem' }}>
+        <AboutText style={{ marginBottom: '5rem' }}>
           studio based in Mexico City.
         </AboutText>
       </AboutLandingPage>

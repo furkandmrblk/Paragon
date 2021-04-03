@@ -109,14 +109,71 @@ export const NavItem = styled.a`
   color: ${color.$white};
 
   margin-right: 1rem;
+
+  @media (max-width: 1510px) {
+    font-size: ${typeface.$mqsm1font};
+  }
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqsm2font};
+  }
+  @media (max-width: ${media.laptopM}) {
+    font-size: ${typeface.$mqsm3font};
+  }
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqsm4font};
+  }
+  @media (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqsm5font};
+  }
+  @media (max-width: 550px) {
+    font-size: ${typeface.$mqsm6font};
+  }
+  @media (max-width: ${media.mobileL}) {
+    font-size: ${typeface.$mqsm7font};
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqsm8font};
+  }
 `;
 
 export const NavNumber = styled.a`
-  font-size: 2rem;
+  font-size: ${typeface.$number};
 
   color: ${color.$white};
 
   margin-bottom: 1rem;
+
+  @media (max-width: 1510px) {
+    font-size: ${typeface.$mqnumber1font};
+  }
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqnumber2font};
+    margin-bottom: 0.7rem;
+  }
+  @media (max-width: ${media.laptopM}) {
+    font-size: ${typeface.$mqnumber3font};
+    margin-bottom: 0.6rem;
+  }
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqnumber4font};
+    margin-bottom: 0.4rem;
+  }
+  @media (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqnumber5font};
+    margin-bottom: 0.15rem;
+  }
+  @media (max-width: 550px) {
+    font-size: ${typeface.$mqnumber6font};
+    margin-bottom: 0.075rem;
+  }
+  @media (max-width: ${media.mobileL}) {
+    font-size: ${typeface.$mqnumber7font};
+    margin-bottom: 0.05rem;
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqnumber8font};
+    margin-bottom: 0.01rem;
+  }
 `;
 
 export const NavLink = styled.a`
@@ -138,5 +195,30 @@ export const NavLink = styled.a`
   }
   &:hover:before {
     max-width: 100%;
+  }
+
+  @media (max-width: 1510px) {
+    font-size: ${typeface.$mqsubtitle1font};
+  }
+  @media (max-width: ${media.laptopL}) {
+    font-size: ${typeface.$mqsubtitle2font};
+  }
+  @media (max-width: ${media.laptopM}) {
+    font-size: ${typeface.$mqsubtitle3font};
+  }
+  @media (max-width: ${media.laptopS}) {
+    font-size: ${typeface.$mqsubtitle4font};
+  }
+  @media (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqsubtitle5font};
+  }
+  @media (max-width: 550px) {
+    font-size: ${typeface.$mqsubtitle6font};
+  }
+  @media (max-width: ${media.mobileL}) {
+    font-size: ${typeface.$mqsubtitle7font};
+  }
+  @media (max-width: ${media.mobileM}) {
+    font-size: ${typeface.$mqsubtitle8font};
   }
 `;

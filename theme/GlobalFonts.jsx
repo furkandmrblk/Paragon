@@ -17,9 +17,8 @@ export const $semiBold = 600;
 export const $lgfont = '13rem';
 export const $mdfont = '8rem';
 export const $smfont = '4.375rem';
-
-// Font Copyright
 export const $subtitle = '2.8125rem';
+export const $number = '2rem';
 
 // MQ Hero / Title
 export const $mqlg1font = '9.75rem';
@@ -61,3 +60,13 @@ export const $mqsubtitle5font = '1.2125rem';
 export const $mqsubtitle6font = '0.8125rem';
 export const $mqsubtitle7font = '0.7125rem';
 export const $mqsubtitle8font = '0.6125rem';
+
+// MQ Numbers
+export const $mqnumber1font = '2rem';
+export const $mqnumber2font = '1.65rem';
+export const $mqnumber3font = '1.4rem';
+export const $mqnumber4font = '1rem';
+export const $mqnumber5font = '0.65rem';
+export const $mqnumber6font = '0.45rem';
+export const $mqnumber7font = '0.4rem';
+export const $mqnumber8font = '0.31rem';

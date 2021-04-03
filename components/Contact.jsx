@@ -11,7 +11,9 @@ export const Contact = () => {
   return (
     <ContactContainer>
       <ContactText>Av. Javier Barros Sierra, Mexico City 01219</ContactText>
-      <ContactSocials>hi@studio-paragon.com</ContactSocials>
+      <ContactSocials href="mailto:hi@studio-paragon.com">
+        hi@studio-paragon.com
+      </ContactSocials>
       <ContactSocialsDiv>
         <ContactSocials>Dribbble</ContactSocials>
         <ContactText>/</ContactText>
