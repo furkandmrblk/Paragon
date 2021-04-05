@@ -7,9 +7,6 @@ import {
   NavHamburger,
   NavItem,
   NavItemDiv,
-  NavItemInnerDiv,
-  NavItemLine,
-  NavItems,
   NavLink,
   NavMenu,
   NavMenuLeft,
@@ -18,8 +15,9 @@ import {
   ProBox,
 } from './NavbarS';
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const [open, setOpen] = useState(false);
+  const titles = props.props;
 
   useEffect(() => {
     if (open) {
@@ -74,102 +72,14 @@ export const Navbar = () => {
       <NavMenu open={open}>
         <NavMenuLeft>
           <MainBox id="mainbox" open={open}>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>POCKET</NavItem>
-                <NavNumber>15</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>CRUMB</NavItem>
-                <NavNumber>14</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>SMILE SPACE</NavItem>
-                <NavNumber>13</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>WWF</NavItem>
-                <NavNumber>12</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>OXXO</NavItem>
-                <NavNumber>11</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>INMEDIC</NavItem>
-                <NavNumber>10</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>VAREGA</NavItem>
-                <NavNumber>09</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>PIE</NavItem>
-                <NavNumber>08</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>LOREM</NavItem>
-                <NavNumber>07</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>IPSUM</NavItem>
-                <NavNumber>06</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>INUMAKI</NavItem>
-                <NavNumber>05</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>YUUJI</NavItem>
-                <NavNumber>04</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>AOI TODO</NavItem>
-                <NavNumber>03</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>GOJO SATORU</NavItem>
-                <NavNumber>02</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>NOBARA</NavItem>
-                <NavNumber>01</NavNumber>
-              </NavItemDiv>
-            </ProBox>
-            <ProBox>
-              <NavItemDiv>
-                <NavItem>PANDA</NavItem>
-                <NavNumber>00</NavNumber>
-              </NavItemDiv>
-            </ProBox>
+            {titles.map((title) => (
+              <ProBox key={title.sys.id}>
+                <NavItemDiv>
+                  <NavItem>{title.fields.title}</NavItem>
+                  <NavNumber>{title.fields.projectNumber}</NavNumber>
+                </NavItemDiv>
+              </ProBox>
+            ))}
           </MainBox>
         </NavMenuLeft>
         <NavMenuRight>

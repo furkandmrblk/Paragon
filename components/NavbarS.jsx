@@ -127,10 +127,10 @@ export const NavItem = styled.a`
     font-size: ${typeface.$mqsm6font};
   }
   @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsm7font};
+    /* font-size: ${typeface.$mqsm7font}; */
   }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsm8font};
+    /* font-size: ${typeface.$mqsm8font}; */
   }
 `;
 
@@ -167,12 +167,12 @@ export const NavNumber = styled.a`
     margin-bottom: 0.075rem;
   }
   @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqnumber7font};
-    margin-bottom: 0.05rem;
+    /* font-size: ${typeface.$mqnumber7font};
+    margin-bottom: 0.05rem; */
   }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqnumber8font};
-    margin-bottom: 0.01rem;
+    /* font-size: ${typeface.$mqnumber8font}; */
+    /* margin-bottom: 0.01rem; */
   }
 `;
 
@@ -239,12 +239,6 @@ export const NavLink = styled.a`
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsubtitle6font};
   }
-  @media (max-width: ${media.mobileL}) {
-    /* font-size: ${typeface.$mqsubtitle7font}; */
-  }
-  @media (max-width: ${media.mobileM}) {
-    /* font-size: ${typeface.$mqsubtitle8font}; */
-  }
 `;
 
 // Experiment
@@ -274,13 +268,11 @@ export const ProBox = styled.div`
   align-items: center;
   width: 400px;
   height: 400px;
-  /* background-color: green; */
   background-size: cover;
   background-blend-mode: darken;
   /* background-color: rgba(0, 0, 0, 0.8); */
   left: 0;
   top: 0;
-  /* clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%); */
 
   margin: 0;
 

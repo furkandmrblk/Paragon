@@ -3,7 +3,12 @@ import Head from 'next/head';
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 
-export default function Home() {
+const client = require('contentful').createClient({
+  space: process.env.NEXT_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN,
+});
+
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -18,8 +23,20 @@ export default function Home() {
         />
         <title>Paragon Design Studio | Homepage</title>
       </Head>
-      <Navbar />
+      <Navbar props={posts} />
       <Hero />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const data = await client.getEntries({
+    content_type: 'title',
+  });
+
+  return {
+    props: {
+      posts: data.items,
+    },
+  };
 }

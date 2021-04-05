@@ -1,7 +1,4 @@
 import { useEffect, useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
-import * as color from '../theme/GlobalColors';
-import * as typeface from '../theme/GlobalFonts';
 
 export default function Cursor() {
   const cursorRef = useRef(null);

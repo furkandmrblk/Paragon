@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { TweenMax, Power3, gsap } from 'gsap';
-import Link from 'next/link';
 import {
   HeroBackgroundRight,
   HeroBackgroundLeft,
