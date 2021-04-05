@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import * as color from '../theme/GlobalColors';
 import * as typeface from '../theme/GlobalFonts';
+import { motion } from 'framer-motion';
 import { media } from '../theme/MediaQueries';
 
 // Hero
@@ -60,7 +61,7 @@ export const HeroRightDiv = styled.div`
 `;
 
 // Title
-export const HeroTitle = styled.h1`
+export const HeroTitle = styled(motion.h1)`
   font-size: ${typeface.$lgfont};
   font-family: ${typeface.oswald};
 
@@ -97,7 +98,7 @@ export const HeroTitle = styled.h1`
 
 // Line
 
-export const HeroLine = styled.div`
+export const HeroLine = styled(motion.div)`
   height: 0;
   width: 12rem;
 
@@ -105,7 +106,7 @@ export const HeroLine = styled.div`
   border: 0.5px solid ${color.$gray};
   border-radius: 5px;
 
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
 
 // Intro

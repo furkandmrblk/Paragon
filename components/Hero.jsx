@@ -67,8 +67,18 @@ export const Hero = () => {
       </IntroScreen>
       <HeroBackgroundRight>
         <HeroRightDiv>
-          <HeroTitle>PARAGON</HeroTitle>
-          <HeroLine />
+          <HeroTitle
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 1, ease: 'easeIn' }}
+          >
+            PARAGON
+          </HeroTitle>
+          <HeroLine
+            initial={{ opacity: 0, x: -400 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.5, duration: 1.1, ease: 'easeIn' }}
+          />
         </HeroRightDiv>
       </HeroBackgroundRight>
       <HeroBackgroundLeft />

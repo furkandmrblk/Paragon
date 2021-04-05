@@ -14,6 +14,10 @@ export const ContactContainer = styled.div`
   width: 100vw;
 
   padding: 0rem 3.75rem;
+
+  @media (max-width: ${media.mobileL}) {
+    padding: 0rem 2.5rem;
+  }
 `;
 
 // Contact Text
@@ -39,11 +43,8 @@ export const ContactText = styled.h1`
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsm6font};
   }
-  @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsm7font};
-  }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsm8font};
+    max-width: 13rem;
   }
 `;
 
@@ -52,7 +53,7 @@ export const ContactSocialsDiv = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: ${media.mobileL}) {
+  @media (max-width: ${media.tablet}) {
     margin-bottom: 5rem;
   }
 `;
@@ -86,10 +87,7 @@ export const ContactSocials = styled.a`
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsm6font};
   }
-  @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsm7font};
-  }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsm8font};
+    max-width: 13rem;
   }
 `;

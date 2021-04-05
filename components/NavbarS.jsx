@@ -44,6 +44,7 @@ export const NavHamburger = styled.a`
     margin-right: 2.2rem;
   }
   @media (max-width: ${media.mobileL}) {
+    margin-right: 1.5rem;
     background-color: ${({ open }) =>
       open ? `${color.$white}` : `${color.$black}`};
   }
@@ -76,6 +77,8 @@ export const NavMenuLeft = styled.div`
   justify-content: center;
   align-items: flex-start;
 
+  overflow: hidden;
+
   height: 100vh;
   width: 70vw;
 `;
@@ -91,22 +94,17 @@ export const NavMenuRight = styled.div`
 
   margin-right: 3rem;
   margin-bottom: 8rem;
-`;
 
-export const NavItemDiv = styled.div`
-  display: flex;
-  align-items: flex-end;
-
-  &:not(:last-child) {
-    margin-bottom: 0rem;
+  @media (max-width: ${media.mobileL}) {
+    margin-right: 1.5rem;
   }
-
-  margin-left: 3rem;
 `;
 
 export const NavItem = styled.a`
   font-size: ${typeface.$smfont};
   color: ${color.$white};
+
+  transition: all 350ms ease-in-out;
 
   margin-right: 1rem;
 
@@ -141,6 +139,8 @@ export const NavNumber = styled.a`
 
   color: ${color.$white};
 
+  transition: all 350ms ease-in-out;
+
   margin-bottom: 1rem;
 
   @media (max-width: 1510px) {
@@ -173,6 +173,30 @@ export const NavNumber = styled.a`
   @media (max-width: ${media.mobileM}) {
     font-size: ${typeface.$mqnumber8font};
     margin-bottom: 0.01rem;
+  }
+`;
+
+export const NavItemDiv = styled.div`
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  width: 150%;
+  margin-left: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+
+  &:hover {
+    ${NavItem} {
+      color: ${color.$lightgray};
+    }
+    ${NavNumber} {
+      color: ${color.$lightgray};
+    }
   }
 `;
 
@@ -216,9 +240,105 @@ export const NavLink = styled.a`
     font-size: ${typeface.$mqsubtitle6font};
   }
   @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsubtitle7font};
+    /* font-size: ${typeface.$mqsubtitle7font}; */
   }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsubtitle8font};
+    /* font-size: ${typeface.$mqsubtitle8font}; */
+  }
+`;
+
+// Experiment
+export const MainBox = styled.div`
+  position: relative;
+  display: ${({ open }) => (open ? 'block' : 'none')};
+  width: 0px;
+  height: 0px;
+  background-color: ${color.$white};
+  transition: all 0.7s ease-out;
+
+  margin-left: -15rem;
+
+  @media (max-width: ${media.tablet}) {
+    margin-left: -14rem;
+  }
+  @media (max-width: 550px) {
+    margin-left: -8rem;
+  }
+`;
+
+export const ProBox = styled.div`
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  /* background-color: green; */
+  background-size: cover;
+  background-blend-mode: darken;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  left: 0;
+  top: 0;
+  /* clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%); */
+
+  margin: 0;
+
+  &:nth-child(1) {
+    transform: translate(90%, -50%) rotate(0deg); // -22.5
+  }
+  &:nth-child(2) {
+    transform: translate(77.5%, -102.5%) rotate(-22.5deg); // -52.5
+  }
+  &:nth-child(3) {
+    transform: translate(50%, -145%) rotate(-45deg); // -52.5
+  }
+  &:nth-child(4) {
+    transform: translate(2.5%, -172.5%) rotate(-67.5deg); // -52.5% -22.5%
+  }
+  &:nth-child(5) {
+    transform: translate(-50%, -187.5%) rotate(-90deg); // +52.5
+  }
+  &:nth-child(6) {
+    transform: translate(-102.5%, -177.5%) rotate(-112.5deg); // +52.5
+  }
+  &:nth-child(7) {
+    transform: translate(-148.5%, -148.5%) rotate(-135deg); // + 52.5
+  }
+  &:nth-child(8) {
+    transform: translate(-177.5%, -102.5%) rotate(-157.5deg); // +22.5
+  }
+  &:nth-child(9) {
+    transform: translate(-190%, -50%) rotate(-180deg); // +22.5
+  }
+  &:nth-child(10) {
+    transform: translate(-177.5%, 2.5%) rotate(-202.5deg); // -22.5
+  }
+  &:nth-child(11) {
+    transform: translate(-148.5%, 48.5%) rotate(-225deg); // -52.5
+  }
+  &:nth-child(12) {
+    transform: translate(-102.5%, 77.5%) rotate(-247.5deg); // -52.5
+  }
+  &:nth-child(13) {
+    transform: translate(-50%, 90%) rotate(-270deg); // -52.5
+  }
+  &:nth-child(14) {
+    transform: translate(2.5%, 77.5%) rotate(-292.5deg); // + 52.5
+  }
+  &:nth-child(15) {
+    transform: translate(48.5%, 48.5%) rotate(-315deg); // 52.5
+  }
+  &:nth-child(16) {
+    transform: translate(77.5%, 2.5%) rotate(-337.5deg);
+  }
+
+  @media (max-width: ${media.tablet}) {
+    width: 350px;
+    height: 350px;
+  }
+  @media (max-width: 550px) {
+    width: 200px;
+    height: 200px;
   }
 `;

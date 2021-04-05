@@ -11,6 +11,10 @@ export const AboutContainer = styled.div`
   align-items: flex-start;
 
   padding: 0rem 3.75rem;
+
+  @media (max-width: ${media.mobileL}) {
+    padding: 0rem 2.5rem;
+  }
 `;
 
 export const AboutLandingPage = styled.div`
@@ -45,11 +49,8 @@ export const AboutText = styled.h1`
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsm6font};
   }
-  @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsm7font};
-  }
   @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsm8font};
+    max-width: 13rem;
   }
 `;
 
@@ -78,12 +79,6 @@ export const AboutSubtitle = styled.h1`
   }
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsubtitle6font};
-  }
-  @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsubtitle7font};
-  }
-  @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsubtitle8font};
   }
 `;
 
@@ -126,11 +121,5 @@ export const AboutSocials = styled.a`
   }
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsm6font};
-  }
-  @media (max-width: ${media.mobileL}) {
-    font-size: ${typeface.$mqsm7font};
-  }
-  @media (max-width: ${media.mobileM}) {
-    font-size: ${typeface.$mqsm8font};
   }
 `;
