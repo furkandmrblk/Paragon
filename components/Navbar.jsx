@@ -81,7 +81,7 @@ export const Navbar = (props) => {
           <MainBox id="mainbox" open={open}>
             {titles.map((title) => (
               <ProBox key={title.sys.id}>
-                <Link href={title.fields.slug}>
+                <Link href={'/' + title.fields.slug}>
                   <NavItemDiv onClick={openDelayMenu}>
                     <NavItem>{title.fields.title}</NavItem>
                     <NavNumber>{title.fields.projectNumber}</NavNumber>
