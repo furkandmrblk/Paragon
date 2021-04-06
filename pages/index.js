@@ -39,5 +39,6 @@ export async function getStaticProps() {
       posts: data.items,
     },
     // revalidate: 10,
+    // Activate when going into production
   };
 }
