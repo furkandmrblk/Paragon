@@ -57,11 +57,18 @@ export const Navbar = (props) => {
         proCount -= 1;
         mainBox.setAttribute('style', 'transform: rotate(' + counter + 'deg)');
       }
+      // console.log(proCount);
     });
   });
 
   const openMenu = () => {
     setOpen(!open);
+  };
+
+  const openDelayMenu = () => {
+    setTimeout(() => {
+      setOpen(!open);
+    }, 1000);
   };
 
   return (
@@ -74,10 +81,12 @@ export const Navbar = (props) => {
           <MainBox id="mainbox" open={open}>
             {titles.map((title) => (
               <ProBox key={title.sys.id}>
-                <NavItemDiv>
-                  <NavItem>{title.fields.title}</NavItem>
-                  <NavNumber>{title.fields.projectNumber}</NavNumber>
-                </NavItemDiv>
+                <Link href={title.fields.slug}>
+                  <NavItemDiv onClick={openDelayMenu}>
+                    <NavItem>{title.fields.title}</NavItem>
+                    <NavNumber>{title.fields.projectNumber}</NavNumber>
+                  </NavItemDiv>
+                </Link>
               </ProBox>
             ))}
           </MainBox>

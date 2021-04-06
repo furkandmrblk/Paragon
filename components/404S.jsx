@@ -47,7 +47,7 @@ export const ErrorButton = styled.button`
   border: 1.5px solid ${color.$black};
 
   font-family: ${typeface.poppins};
-  font-size: ${typeface.$textfont};
+  font-size: ${typeface.$subtitle};
   text-align: center;
 
   margin-top: 1rem;
@@ -71,31 +71,31 @@ export const ErrorButton = styled.button`
   transition: all 350ms ease-in-out;
 
   @media (max-width: ${media.laptopL}) {
-    font-size: ${typeface.$mqtext1font};
+    font-size: ${typeface.$mqsubtitle1font};
 
     height: 4.5rem;
     width: 18rem;
   }
   @media (max-width: ${media.laptopM}) {
-    font-size: ${typeface.$mqtext2font};
+    font-size: ${typeface.$mqsubtitle2font};
 
     height: 4.5rem;
     width: 16rem;
   }
   @media (max-width: ${media.laptopS}) {
-    font-size: ${typeface.$mqtext3font};
+    font-size: ${typeface.$mqsubtitle3font};
 
     height: 4.2rem;
     width: 15rem;
   }
   @media (min-width: 550px) and (max-width: ${media.tablet}) {
-    font-size: ${typeface.$mqtext4font};
+    font-size: ${typeface.$mqsubtitle4font};
 
     height: 4rem;
     width: 13rem;
   }
   @media (max-width: 550px) {
-    font-size: ${typeface.$mqtext5font};
+    font-size: ${typeface.$mqsubtitle5font};
 
     height: 3.5rem;
     width: 10.2rem;

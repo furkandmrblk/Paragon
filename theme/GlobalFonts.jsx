@@ -19,6 +19,7 @@ export const $mdfont = '8rem';
 export const $smfont = '4.375rem';
 export const $subtitle = '2.8125rem';
 export const $number = '2rem';
+export const $text = '1rem';
 
 // MQ Hero / Title
 export const $mqlg1font = '9.75rem';

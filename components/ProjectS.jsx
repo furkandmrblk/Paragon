@@ -3,126 +3,72 @@ import * as color from '../theme/GlobalColors';
 import * as typeface from '../theme/GlobalFonts';
 import { media } from '../theme/MediaQueries';
 
-// Project
-// export const ProjectDiv = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: center;
+// Project Container
+export const ProjectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-//   background-color: ${color.$black};
+  background-color: ${color.$black};
+  color: ${color.$white};
 
-//   min-height: 100vh;
+  min-height: 100vh;
 
-//   padding-bottom: 5rem;
-// `;
+  padding: 11rem 7rem 5rem 7rem;
+`;
 
 // Project Title
+export const ProjectTitle = styled.div`
+  font-size: ${typeface.$smfont};
+  font-weight: ${typeface.$light};
 
-// export const ProjectTitle = styled.h1`
-//   font-size: ${typeface.$mqlg1font};
-//   font-weight: ${typeface.$medium};
+  margin-bottom: 1rem;
+`;
 
-//   text-align: center;
+// Project MainImage
+export const ProjectMainImage = styled.img`
+  object-fit: cover;
 
-//   color: ${color.$white};
+  height: 750px;
+  width: 1400px;
 
-//   user-select: none;
+  margin-bottom: 2rem;
+`;
 
-//   margin-top: 10rem;
+// Project MainText
+export const ProjectMainText = styled.h1`
+  font-size: ${typeface.$text};
+  font-weight: ${typeface.$light};
+  text-align: justify;
+  max-width: 1100px;
 
-//   @media (max-width: ${media.laptopL}) {
-//     font-size: ${typeface.$mqlg2font};
-//   }
-//   @media (max-width: ${media.laptopM}) {
-//     font-size: ${typeface.$mqlg3font};
-//   }
-//   @media (max-width: ${media.laptopS}) {
-//     font-size: ${typeface.$mqlg4font};
-//   }
-//   @media (max-width: ${media.tablet}) {
-//     font-size: ${typeface.$mqlg5font};
-//   }
-//   @media (max-width: 550px) {
-//     font-size: ${typeface.$mqlg6font};
-//   }
-//   @media (max-width: ${media.mobileL}) {
-//     font-size: ${typeface.$mqlg7font};
-//   }
-//   @media (max-width: ${media.mobileM}) {
-//     font-size: ${typeface.$mqlg8font};
-//   }
-//   @media (max-width: ${media.mobileS}) {
-//     font-size: ${typeface.$mqlg9font};
-//   }
-// `;
+  margin-bottom: 15rem;
+`;
+
+// BottomDiv
+export const ProjectBottomDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 87.4rem;
+
+  margin-bottom: 10rem;
+`;
 
 // Project Image
+export const ProjectImage = styled.img`
+  object-fit: cover;
 
-// export const ProjectImage = styled.img`
-//   object-fit: contain;
-//   height: 20rem;
-//   width: 40rem;
-// `;
+  height: 485px;
+  width: 570px;
+`;
 
-// ProjectInnerDiv
-// export const ProjectInnerDiv = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-wrap: wrap;
-
-//   margin-top: 10rem;
-//   padding: 0 5rem;
-//   width: 100vw;
-
-/* p {
-    font-size: ${typeface.$copyrightfont};
-    font-weight: 300;
-
-    color: ${color.$white};
-
-    text-align: justify;
-
-    max-width: 40rem;
-    &:first-child {
-      order: 1;
-    }
-    &:nth-child(3) {
-      order: 4;
-    }
-    &:nth-child(5) {
-      order: 5;
-    }
-    &:nth-child(7) {
-      order: 8;
-    }
-  } 
-
-  ${ProjectImage} {
-     &:nth-child(2) {
-      order: 2;
-    }
-    &:nth-child(4) {
-      order: 3;
-    }
-    &:nth-child(6) {
-      order: 6;
-    }
-    &:nth-child(8) {
-      order: 7;
-    } 
-  }
-`; */
-
-// Project Description
-// export const ProjectDescription = styled.h1`
-//   font-size: ${typeface.$copyrightfont};
-//   font-weight: 300;
-
-//   color: ${color.$white};
-
-//   text-align: justify;
-
-//   max-width: 40rem;
-// `;
+// Project Text
+export const ProjectText = styled.h1`
+  font-size: ${typeface.$text};
+  font-weight: ${typeface.$light};
+  text-align: justify;
+  max-width: 35rem;
+`;
