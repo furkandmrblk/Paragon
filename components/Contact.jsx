@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import {
   ContactContainer,
@@ -10,14 +10,43 @@ import {
 export const Contact = () => {
   return (
     <ContactContainer>
-      <ContactText>Av. Javier Barros Sierra, Mexico City 01219</ContactText>
-      <ContactSocials href="mailto:hi@studio-paragon.com">
+      <ContactText
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
+        Av. Javier Barros Sierra, Mexico City 01219
+      </ContactText>
+      <ContactSocials
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
+        href="mailto:hi@studio-paragon.com"
+      >
         hi@studio-paragon.com
       </ContactSocials>
       <ContactSocialsDiv>
-        <ContactSocials>Dribbble</ContactSocials>
-        <ContactText>/</ContactText>
-        <ContactSocials>Behance</ContactSocials>
+        <ContactSocials
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
+        >
+          Dribbble
+        </ContactSocials>
+        <ContactText
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
+        >
+          /
+        </ContactText>
+        <ContactSocials
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
+        >
+          Behance
+        </ContactSocials>
       </ContactSocialsDiv>
     </ContactContainer>
   );

@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import * as color from '../theme/GlobalColors';
 import * as typeface from '../theme/GlobalFonts';
+import { motion } from 'framer-motion';
 import { media } from '../theme/MediaQueries';
 
 // About Container
@@ -27,7 +28,7 @@ export const AboutLandingPage = styled.div`
 `;
 
 // About Text
-export const AboutText = styled.h1`
+export const AboutText = styled(motion.h1)`
   font-size: ${typeface.$smfont};
   font-weight: ${typeface.$light};
 
@@ -55,7 +56,7 @@ export const AboutText = styled.h1`
 `;
 
 // About Subtitle
-export const AboutSubtitle = styled.h1`
+export const AboutSubtitle = styled(motion.h1)`
   font-size: ${typeface.$subtitle};
   font-weight: ${typeface.$light};
   color: ${color.$gray};
@@ -90,7 +91,7 @@ export const AboutSocialsDiv = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const AboutSocials = styled.a`
+export const AboutSocials = styled(motion.a)`
   font-size: ${typeface.$smfont};
   font-weight: ${typeface.$light};
 
@@ -102,7 +103,7 @@ export const AboutSocials = styled.a`
     color: ${color.$lightgray};
   }
 
-  transition: all 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 
   @media (max-width: 1510px) {
     font-size: ${typeface.$mqsm1font};

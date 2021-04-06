@@ -57,7 +57,6 @@ export const Navbar = (props) => {
         proCount -= 1;
         mainBox.setAttribute('style', 'transform: rotate(' + counter + 'deg)');
       }
-      // console.log(proCount);
     });
   });
 

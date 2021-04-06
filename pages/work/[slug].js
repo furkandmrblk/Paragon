@@ -51,11 +51,11 @@ export default function Post({ posts, post }) {
         {data.textTwo && (
           <>
             <ProjectBottomDiv>
-              <ProjectText>{data.textTwo}</ProjectText>
               <ProjectImage
                 src={'https:' + data.imageTwo.fields.file.url}
                 alt="ImageTwo"
               />
+              <ProjectText>{data.textTwo}</ProjectText>
             </ProjectBottomDiv>{' '}
           </>
         )}
@@ -72,38 +72,6 @@ export default function Post({ posts, post }) {
           </>
         )}
       </ProjectContainer>
-      {/* <ProjectDiv>
-        <ProjectTitle>
-          {post.fields.title}{' '}
-          <span style={{ color: `#6a6a6b32` }}>{post.fields.subtitle}</span>.
-        </ProjectTitle>
-        <ProjectInnerDiv>
-          {documentToReactComponents(post.fields.content, {
-            renderNode: {
-              [BLOCKS.EMBEDDED_ASSET]: (node) => (
-                <ProjectImage
-                  src={'https:' + node.data.target.fields.file.url}
-                  width={node.data.target.fields.file.details.image.width}
-                  height={node.data.target.fields.file.details.image.height}
-                />
-              ),
-            },
-          })} */}
-
-      {/* <ProjectDescription>
-            {documentToReactComponents(post.fields.content.content[0])}
-          </ProjectDescription>
-          {documentToReactComponents(post.fields.content.content[1], {
-            renderNode: {
-              [BLOCKS.EMBEDDED_ASSET]: (node) => (
-                <ProjectImage
-                  src={'https:' + node.data.target.fields.file.url}
-                  width={node.data.target.fields.file.details.image.width}
-                  height={node.data.target.fields.file.details.image.height}
-                />
-              ),
-            },
-          })} */}
     </>
   );
 }

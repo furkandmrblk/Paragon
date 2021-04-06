@@ -107,6 +107,8 @@ export const HeroLine = styled(motion.div)`
   border-radius: 5px;
 
   margin-top: 1rem;
+
+  overflow: hidden;
 `;
 
 // Intro
