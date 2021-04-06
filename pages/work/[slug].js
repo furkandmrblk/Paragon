@@ -1,8 +1,8 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Head from 'next/head';
-import { Error } from '../components/404';
-import { Navbar } from '../components/Navbar';
+import { Error } from '../../components/404';
+import { Navbar } from '../../components/Navbar';
 import {
   ProjectBottomDiv,
   ProjectContainer,
@@ -11,7 +11,7 @@ import {
   ProjectMainText,
   ProjectText,
   ProjectTitle,
-} from '../components/ProjectS';
+} from '../../components/ProjectS';
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -21,7 +21,7 @@ const client = require('contentful').createClient({
 export default function Post({ posts, post }) {
   if (!post) return <Error />;
   const data = post.fields;
-  console.log(data);
+
   return (
     <>
       <Head>
