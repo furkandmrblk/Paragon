@@ -68,7 +68,7 @@ export const Navbar = (props) => {
   const openDelayMenu = () => {
     setTimeout(() => {
       setOpen(!open);
-    }, 300);
+    }, 150);
   };
 
   return (
