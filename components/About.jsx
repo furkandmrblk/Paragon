@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TweenMax, Power3, gsap } from 'gsap';
+import { Power3, gsap } from 'gsap';
 import {
   AboutContainer,
   AboutLandingPage,

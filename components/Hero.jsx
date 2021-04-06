@@ -17,17 +17,19 @@ export const Hero = () => {
   let IntroText = useRef(null);
 
   useEffect(() => {
-    TweenMax.to(IntroText, 1.5, {
-      opacity: 1,
-      y: -70,
-      ease: Power3.easeOut,
-    }).then(() => {
-      TweenMax.to(IntroText, 0.7, {
+    gsap
+      .from(IntroText, 1.5, {
         opacity: 0,
-        display: 'none',
+        y: 70,
         ease: Power3.easeOut,
+      })
+      .then(() => {
+        TweenMax.to(IntroText, 0.7, {
+          opacity: 0,
+          display: 'none',
+          ease: Power3.easeOut,
+        });
       });
-    });
 
     const IntroEffect = () => {
       TweenMax.to(Intro, 2.5, {

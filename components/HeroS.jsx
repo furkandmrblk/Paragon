@@ -147,10 +147,6 @@ export const IntroTitle = styled.h1`
 
   user-select: none;
 
-  opacity: 0;
-
-  margin-top: 4.375rem;
-
   @media (max-width: ${media.laptopL}) {
     font-size: ${typeface.$mqmd1font};
   }
