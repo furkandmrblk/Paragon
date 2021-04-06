@@ -31,7 +31,7 @@ export default function Post({ posts, post }) {
       <ProjectContainer>
         <ProjectTitle>{data.title}</ProjectTitle>
         <ProjectMainImage
-          src={data.mainImage.fields.file.url}
+          src={'https:' + data.mainImage.fields.file.url}
           alt="MainImage"
         />
         <ProjectMainText>{data.mainText}</ProjectMainText>
@@ -41,7 +41,7 @@ export default function Post({ posts, post }) {
             <ProjectBottomDiv>
               <ProjectText>{data.textOne}</ProjectText>
               <ProjectImage
-                src={data.imageOne.fields.file.url}
+                src={'https:' + data.imageOne.fields.file.url}
                 alt="ImageOne"
               />
             </ProjectBottomDiv>{' '}
@@ -53,7 +53,7 @@ export default function Post({ posts, post }) {
             <ProjectBottomDiv>
               <ProjectText>{data.textTwo}</ProjectText>
               <ProjectImage
-                src={data.imageTwo.fields.file.url}
+                src={'https:' + data.imageTwo.fields.file.url}
                 alt="ImageTwo"
               />
             </ProjectBottomDiv>{' '}
@@ -65,7 +65,7 @@ export default function Post({ posts, post }) {
             <ProjectBottomDiv>
               <ProjectText>{data.textThree}</ProjectText>
               <ProjectImage
-                src={data.imageThree.fields.file.url}
+                src={'https:' + data.imageThree.fields.file.url}
                 alt="ImageThree"
               />
             </ProjectBottomDiv>{' '}
