@@ -26,10 +26,6 @@ export default function Post({ posts, post }) {
   if (!post) return <Error />;
   const data = post.fields;
 
-  useEffect(() => {
-    console.log(window.innerWidth);
-  }, []);
-
   return (
     <>
       <Head>

@@ -82,7 +82,7 @@ export const ProjectMainImage = styled.img`
 // Project MainText
 export const ProjectMainText = styled.h1`
   font-size: ${typeface.$text};
-  font-weight: ${typeface.$light};
+  font-weight: ${typeface.$thin};
   text-align: justify;
   max-width: 50rem;
 
@@ -136,13 +136,14 @@ export const ProjectBottomContainer = styled.div`
 
   @media (max-width: ${media.tablet}) {
     align-items: flex-start;
-    margin-left: 3.1875rem;
+
+    padding-left: 3.1875rem;
   }
   @media (max-width: 550px) {
-    margin-left: 2.1875rem;
+    padding-left: 2.1875rem;
   }
   @media (max-width: ${media.mobileL}) {
-    margin-left: 1.1875rem;
+    padding-left: 1.1875rem;
   }
 `;
 
@@ -260,7 +261,7 @@ export const ProjectImageBGLeft = styled.div`
 // Project Text
 export const ProjectText = styled.h1`
   font-size: ${typeface.$text};
-  font-weight: ${typeface.$light};
+  font-weight: ${typeface.$thin};
   text-align: justify;
   max-width: 35rem;
 
