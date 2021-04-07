@@ -47,12 +47,14 @@ export const Navbar = (props) => {
     let counter = 0;
     let proCount = 0;
     const mainBox = document.getElementById('mainbox');
-    window.addEventListener('wheel', function (e) {
-      if (e.deltaY < 0) {
+
+    window.addEventListener('mousewheel', function (e) {
+      const delta = e.deltaY;
+      if (delta < 0) {
         counter += 22.5;
         proCount += 1;
         mainBox.setAttribute('style', 'transform: rotate(' + counter + 'deg)');
-      } else if (e.deltaY > 0) {
+      } else if (delta > 0) {
         counter -= 22.5;
         proCount -= 1;
         mainBox.setAttribute('style', 'transform: rotate(' + counter + 'deg)');

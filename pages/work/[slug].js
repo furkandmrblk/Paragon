@@ -1,12 +1,16 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { Error } from '../../components/404';
 import { Navbar } from '../../components/Navbar';
 import {
+  ProjectBottomContainer,
   ProjectBottomDiv,
   ProjectContainer,
   ProjectImage,
+  ProjectImageBGRight,
+  ProjectImageBGLeft,
   ProjectMainImage,
   ProjectMainText,
   ProjectText,
@@ -22,6 +26,10 @@ export default function Post({ posts, post }) {
   if (!post) return <Error />;
   const data = post.fields;
 
+  useEffect(() => {
+    console.log(window.innerWidth);
+  }, []);
+
   return (
     <>
       <Head>
@@ -35,42 +43,46 @@ export default function Post({ posts, post }) {
           alt="MainImage"
         />
         <ProjectMainText>{data.mainText}</ProjectMainText>
+        <ProjectBottomContainer>
+          {data.textOne && (
+            <>
+              <ProjectBottomDiv>
+                <ProjectText>{data.textOne}</ProjectText>
+                <ProjectImage
+                  src={'https:' + data.imageOne.fields.file.url}
+                  alt="ImageOne"
+                />
+                <ProjectImageBGRight />
+              </ProjectBottomDiv>{' '}
+            </>
+          )}
 
-        {data.textOne && (
-          <>
-            <ProjectBottomDiv>
-              <ProjectText>{data.textOne}</ProjectText>
-              <ProjectImage
-                src={'https:' + data.imageOne.fields.file.url}
-                alt="ImageOne"
-              />
-            </ProjectBottomDiv>{' '}
-          </>
-        )}
+          {data.textTwo && (
+            <>
+              <ProjectBottomDiv>
+                <ProjectImage
+                  src={'https:' + data.imageTwo.fields.file.url}
+                  alt="ImageTwo"
+                />
+                <ProjectText>{data.textTwo}</ProjectText>
+                <ProjectImageBGLeft />
+              </ProjectBottomDiv>{' '}
+            </>
+          )}
 
-        {data.textTwo && (
-          <>
-            <ProjectBottomDiv>
-              <ProjectImage
-                src={'https:' + data.imageTwo.fields.file.url}
-                alt="ImageTwo"
-              />
-              <ProjectText>{data.textTwo}</ProjectText>
-            </ProjectBottomDiv>{' '}
-          </>
-        )}
-
-        {data.textThree && (
-          <>
-            <ProjectBottomDiv>
-              <ProjectText>{data.textThree}</ProjectText>
-              <ProjectImage
-                src={'https:' + data.imageThree.fields.file.url}
-                alt="ImageThree"
-              />
-            </ProjectBottomDiv>{' '}
-          </>
-        )}
+          {data.textThree && (
+            <>
+              <ProjectBottomDiv>
+                <ProjectText>{data.textThree}</ProjectText>
+                <ProjectImage
+                  src={'https:' + data.imageThree.fields.file.url}
+                  alt="ImageThree"
+                />
+                <ProjectImageBGRight />
+              </ProjectBottomDiv>{' '}
+            </>
+          )}
+        </ProjectBottomContainer>
       </ProjectContainer>
     </>
   );

@@ -180,30 +180,32 @@ export const About = () => {
         trigger: Item20,
       },
     });
-    gsap.from(Item19, 1.5, {
-      opacity: 0,
-      y: 50,
-      ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: Item20,
-      },
-    });
-    gsap.from(Item20, 1.5, {
-      opacity: 0,
-      y: 50,
-      ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: Item21,
-      },
-    });
-    gsap.from(Item21, 1.5, {
-      opacity: 0,
-      y: 50,
-      ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: Item21,
-      },
-    });
+    setTimeout(() => {
+      gsap.from(Item19, 1.5, {
+        opacity: 0,
+        y: 50,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: Item20,
+        },
+      });
+      gsap.from(Item20, 1.5, {
+        opacity: 0,
+        y: 50,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: Item21,
+        },
+      });
+      gsap.from(Item21, 1.5, {
+        opacity: 0,
+        y: 50,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: Item21,
+        },
+      });
+    }, 400);
   });
 
   return (

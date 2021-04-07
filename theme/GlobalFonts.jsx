@@ -62,6 +62,12 @@ export const $mqsubtitle6font = '0.8125rem';
 export const $mqsubtitle7font = '0.7125rem';
 export const $mqsubtitle8font = '0.6125rem';
 
+// MQ Text Font
+export const $mqtext1font = '0.9rem';
+export const $mqtext2font = '0.85rem';
+export const $mqtext3font = '0.8rem';
+export const $mqtext4font = '0.75rem';
+
 // MQ Numbers
 export const $mqnumber1font = '2rem';
 export const $mqnumber2font = '1.65rem';

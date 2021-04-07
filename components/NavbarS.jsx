@@ -5,6 +5,7 @@ import { media } from '../theme/MediaQueries';
 
 // Nav
 export const Nav = styled.div`
+  z-index: 100;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -124,7 +125,7 @@ export const NavItem = styled.a`
     font-size: ${typeface.$mqsm5font};
   }
   @media (max-width: 550px) {
-    font-size: ${typeface.$mqsm6font};
+    /* font-size: ${typeface.$mqsm6font}; */
   }
   @media (max-width: ${media.mobileL}) {
     /* font-size: ${typeface.$mqsm7font}; */
@@ -163,8 +164,8 @@ export const NavNumber = styled.a`
     margin-bottom: 0.15rem;
   }
   @media (max-width: 550px) {
-    font-size: ${typeface.$mqnumber6font};
-    margin-bottom: 0.075rem;
+    /* font-size: ${typeface.$mqnumber6font};
+    margin-bottom: 0.075rem; */
   }
   @media (max-width: ${media.mobileL}) {
     /* font-size: ${typeface.$mqnumber7font};
@@ -237,7 +238,7 @@ export const NavLink = styled.a`
     font-size: ${typeface.$mqsubtitle5font};
   }
   @media (max-width: 550px) {
-    font-size: ${typeface.$mqsubtitle6font};
+    /* font-size: ${typeface.$mqsubtitle6font}; */
   }
 `;
 
