@@ -51,6 +51,9 @@ export const AboutText = styled(motion.h1)`
     font-size: ${typeface.$mqsm6font};
   }
   @media (max-width: ${media.mobileM}) {
+    max-width: 20rem;
+  }
+  @media (max-width: 368px) {
     max-width: 13rem;
   }
 `;
@@ -122,5 +125,8 @@ export const AboutSocials = styled(motion.a)`
   }
   @media (max-width: 550px) {
     font-size: ${typeface.$mqsm6font};
+    &:first-child {
+      margin-right: 0.1rem;
+    }
   }
 `;

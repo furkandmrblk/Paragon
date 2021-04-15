@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   MainBox,
+  MobileItemDiv,
+  MobileSliderDiv,
   Nav,
   NavDiv,
   NavHamburger,
@@ -26,10 +28,8 @@ export const Navbar = (props) => {
       document.body.style.overflow = '';
     }
 
-    if (window.location.pathname === '/work') {
-    } else if (window.location.pathname === '/contact') {
+    if (window.location.pathname === '/contact') {
       document.getElementById('hamburger').style.backgroundColor = '#151515';
-
       if (open === true) {
         document.getElementById('hamburger').style.backgroundColor = '#FDFDFD';
       } else if (open === false) {
@@ -48,7 +48,7 @@ export const Navbar = (props) => {
     let proCount = 0;
     const mainBox = document.getElementById('mainbox');
 
-    window.addEventListener('mousewheel', function (e) {
+    window.addEventListener('wheel', function (e) {
       const delta = e.deltaY;
       if (delta < 0) {
         counter += 22.5;
@@ -91,6 +91,16 @@ export const Navbar = (props) => {
               </ProBox>
             ))}
           </MainBox>
+          <MobileSliderDiv>
+            {titles.map((title) => (
+              <Link href={'/work/' + title.fields.slug} key={title.sys.id}>
+                <MobileItemDiv onClick={openDelayMenu}>
+                  <NavItem>{title.fields.title}</NavItem>
+                  <NavNumber>{title.fields.projectNumber}</NavNumber>
+                </MobileItemDiv>
+              </Link>
+            ))}
+          </MobileSliderDiv>
         </NavMenuLeft>
         <NavMenuRight>
           <Link href="/">

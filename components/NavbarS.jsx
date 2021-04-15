@@ -39,10 +39,14 @@ export const NavHamburger = styled.a`
     background-color: ${color.$lightgray};
   }
 
-  transition: all 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
 
   @media (max-width: 550px) {
     margin-right: 2.2rem;
+
+    &:hover {
+      background-color: ${color.$white};
+    }
   }
   @media (max-width: ${media.mobileL}) {
     margin-right: 1.5rem;
@@ -60,7 +64,7 @@ export const NavMenu = styled.div`
 
   background-color: ${color.$black};
 
-  height: 100vh;
+  min-height: 100vh;
   width: ${({ open }) => (open ? '100vw' : '0vw')};
 
   transition: all 800ms ease-in-out;
@@ -68,7 +72,7 @@ export const NavMenu = styled.div`
   top: 0;
 
   @media (max-width: ${media.tablet}) {
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 `;
 
@@ -80,8 +84,16 @@ export const NavMenuLeft = styled.div`
 
   overflow: hidden;
 
-  height: 100vh;
+  min-height: 100vh;
   width: 70vw;
+
+  @media (max-width: ${media.tablet}) {
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+
+    padding-top: 10rem;
+  }
 `;
 
 export const NavMenuRight = styled.div`
@@ -96,8 +108,16 @@ export const NavMenuRight = styled.div`
   margin-right: 3rem;
   margin-bottom: 8rem;
 
+  @media (max-width: ${media.tablet}) {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+  }
   @media (max-width: ${media.mobileL}) {
-    margin-right: 1.5rem;
+    margin-right: 0rem;
   }
 `;
 
@@ -122,13 +142,13 @@ export const NavItem = styled.a`
     font-size: ${typeface.$mqsm4font};
   }
   @media (max-width: ${media.tablet}) {
-    font-size: ${typeface.$mqsm5font};
+    font-size: ${typeface.$mqsm3font};
   }
   @media (max-width: 550px) {
-    /* font-size: ${typeface.$mqsm6font}; */
+    font-size: ${typeface.$mqsm4font};
   }
   @media (max-width: ${media.mobileL}) {
-    /* font-size: ${typeface.$mqsm7font}; */
+    font-size: ${typeface.$mqsm5font};
   }
   @media (max-width: ${media.mobileM}) {
     /* font-size: ${typeface.$mqsm8font}; */
@@ -236,6 +256,10 @@ export const NavLink = styled.a`
   }
   @media (max-width: ${media.tablet}) {
     font-size: ${typeface.$mqsubtitle5font};
+    margin-right: 4rem;
+    &:last-child {
+      margin-bottom: 2rem;
+    }
   }
   @media (max-width: 550px) {
     /* font-size: ${typeface.$mqsubtitle6font}; */
@@ -254,10 +278,7 @@ export const MainBox = styled.div`
   margin-left: -15rem;
 
   @media (max-width: ${media.tablet}) {
-    margin-left: -14rem;
-  }
-  @media (max-width: 550px) {
-    margin-left: -8rem;
+    display: none;
   }
 `;
 
@@ -333,5 +354,31 @@ export const ProBox = styled.div`
   @media (max-width: 550px) {
     width: 200px;
     height: 200px;
+  }
+`;
+
+// Mobile Slider
+
+export const MobileSliderDiv = styled.div`
+  display: none;
+  @media (max-width: ${media.tablet}) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    color: ${color.$white};
+
+    overflow: hidden;
+    white-space: nowrap;
+  }
+`;
+
+export const MobileItemDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
   }
 `;

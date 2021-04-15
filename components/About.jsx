@@ -255,7 +255,7 @@ export const About = () => {
       <AboutSocialsDiv>
         <AboutSocials ref={(el) => (Item19 = el)}>Dribbble </AboutSocials>
         <AboutText ref={(el) => (Item20 = el)}> - </AboutText>
-        <AboutSocials ref={(el) => (Item21 = el)}> Behance</AboutSocials>
+        <AboutSocials ref={(el) => (Item21 = el)}>Behance</AboutSocials>
       </AboutSocialsDiv>
     </AboutContainer>
   );

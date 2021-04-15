@@ -114,6 +114,7 @@ export const HeroLine = styled(motion.div)`
 // Intro
 
 export const IntroScreen = styled.div`
+  z-index: 9999;
   position: absolute;
   display: flex;
   justify-content: center;
