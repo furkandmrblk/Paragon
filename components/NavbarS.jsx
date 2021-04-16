@@ -89,7 +89,6 @@ export const NavMenuLeft = styled.div`
 
   @media (max-width: ${media.tablet}) {
     position: relative;
-    min-height: 100vh;
     align-items: center;
 
     padding-top: 10rem;
@@ -368,7 +367,7 @@ export const MobileSliderDiv = styled.div`
     align-items: flex-start;
     color: ${color.$white};
 
-    overflow: hidden;
+    /* overflow: hidden; */
     white-space: nowrap;
   }
 `;
@@ -378,7 +377,9 @@ export const MobileItemDiv = styled.div`
   justify-content: center;
   align-items: center;
 
-  &:not(:last-child) {
+  cursor: pointer;
+
+  &:not(:first-child) {
     margin-bottom: 1rem;
   }
 `;

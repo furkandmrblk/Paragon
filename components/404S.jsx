@@ -18,19 +18,27 @@ export const ErrorDiv = styled.div`
 
 // Error Message
 export const ErrorNumber = styled.h1`
-  font-size: ${typeface.$mqmd5font};
-  font-weight: ${typeface.$medium};
+  font-size: ${typeface.$mqsm4font};
+  font-weight: ${typeface.$regular};
 
   color: ${color.$white};
+
+  @media (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqsm5font};
+  }
 `;
 
 export const ErrorMessage = styled.h1`
-  font-size: ${typeface.$mqmd4font};
-  font-weight: ${typeface.$medium};
+  font-size: ${typeface.$mqsm4font};
+  font-weight: ${typeface.$regular};
 
   text-align: center;
 
   color: ${color.$white};
+
+  @media (max-width: ${media.tablet}) {
+    font-size: ${typeface.$mqsm5font};
+  }
 `;
 
 // Back to Homepage
@@ -40,14 +48,14 @@ export const ErrorButton = styled.button`
   justify-content: center;
   align-items: center;
 
-  height: 5rem;
-  width: 20rem;
+  height: 4rem;
+  width: 16rem;
 
   background-color: ${color.$white};
   border: 1.5px solid ${color.$black};
 
   font-family: ${typeface.poppins};
-  font-size: ${typeface.$subtitle};
+  font-size: ${typeface.$mqsm6font};
   text-align: center;
 
   margin-top: 1rem;
@@ -71,32 +79,22 @@ export const ErrorButton = styled.button`
   transition: all 350ms ease-in-out;
 
   @media (max-width: ${media.laptopL}) {
-    font-size: ${typeface.$mqsubtitle1font};
-
     height: 4.5rem;
     width: 18rem;
   }
   @media (max-width: ${media.laptopM}) {
-    font-size: ${typeface.$mqsubtitle2font};
-
     height: 4.5rem;
     width: 16rem;
   }
   @media (max-width: ${media.laptopS}) {
-    font-size: ${typeface.$mqsubtitle3font};
-
     height: 4.2rem;
     width: 15rem;
   }
   @media (min-width: 550px) and (max-width: ${media.tablet}) {
-    font-size: ${typeface.$mqsubtitle4font};
-
     height: 4rem;
     width: 13rem;
   }
   @media (max-width: 550px) {
-    font-size: ${typeface.$mqsubtitle5font};
-
     height: 3.5rem;
     width: 10.2rem;
   }
