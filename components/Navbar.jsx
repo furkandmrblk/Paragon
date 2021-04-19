@@ -44,6 +44,16 @@ export const Navbar = (props) => {
       }
     }
 
+    const NavLeft = document.getElementById('navleft');
+
+    if (open === true) {
+      setTimeout(() => {
+        NavLeft.style.overflow = '';
+      }, 1000);
+    } else {
+      NavLeft.style.overflow = 'hidden';
+    }
+
     let counter = 0;
     let proCount = 0;
     const mainBox = document.getElementById('mainbox');
@@ -78,7 +88,7 @@ export const Navbar = (props) => {
         <NavHamburger id="hamburger" open={open} onClick={openMenu} />
       </NavDiv>
       <NavMenu open={open}>
-        <NavMenuLeft>
+        <NavMenuLeft id="navleft">
           <MainBox id="mainbox" open={open}>
             {titles.map((title) => (
               <ProBox key={title.sys.id}>

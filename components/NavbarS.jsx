@@ -82,8 +82,6 @@ export const NavMenuLeft = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  overflow: hidden;
-
   min-height: 100vh;
   width: 70vw;
 
@@ -91,7 +89,7 @@ export const NavMenuLeft = styled.div`
     position: relative;
     align-items: center;
 
-    padding-top: 10rem;
+    padding-top: 1rem;
   }
 `;
 
@@ -149,9 +147,6 @@ export const NavItem = styled.a`
   @media (max-width: ${media.mobileL}) {
     font-size: ${typeface.$mqsm5font};
   }
-  @media (max-width: ${media.mobileM}) {
-    /* font-size: ${typeface.$mqsm8font}; */
-  }
 `;
 
 export const NavNumber = styled.a`
@@ -182,29 +177,18 @@ export const NavNumber = styled.a`
     font-size: ${typeface.$mqnumber5font};
     margin-bottom: 0.15rem;
   }
-  @media (max-width: 550px) {
-    /* font-size: ${typeface.$mqnumber6font};
-    margin-bottom: 0.075rem; */
-  }
-  @media (max-width: ${media.mobileL}) {
-    /* font-size: ${typeface.$mqnumber7font};
-    margin-bottom: 0.05rem; */
-  }
-  @media (max-width: ${media.mobileM}) {
-    /* font-size: ${typeface.$mqnumber8font}; */
-    /* margin-bottom: 0.01rem; */
-  }
 `;
 
 export const NavItemDiv = styled.div`
   position: absolute;
+
   left: 0;
 
   display: flex;
   align-items: flex-end;
 
   width: 150%;
-  margin-left: 2rem;
+  margin-left: 10rem;
 
   &:not(:last-child) {
     margin-bottom: 0rem;
@@ -217,6 +201,10 @@ export const NavItemDiv = styled.div`
     ${NavNumber} {
       color: ${color.$lightgray};
     }
+  }
+
+  @media (max-width: ${media.laptopS}) {
+    margin-left: 11rem;
   }
 `;
 
@@ -261,7 +249,10 @@ export const NavLink = styled.a`
     }
   }
   @media (max-width: 550px) {
-    /* font-size: ${typeface.$mqsubtitle6font}; */
+    margin-right: 2.2rem;
+  }
+  @media (max-width: ${media.mobileL}) {
+    margin-right: 1.5rem;
   }
 `;
 
@@ -274,15 +265,16 @@ export const MainBox = styled.div`
   background-color: ${color.$white};
   transition: all 0.7s ease-out;
 
-  margin-left: -15rem;
-
+  margin-left: -22.5rem;
+  @media (max-width: ${media.laptopS}) {
+    margin-left: -23.5rem;
+  }
   @media (max-width: ${media.tablet}) {
     display: none;
   }
 `;
 
 export const ProBox = styled.div`
-  z-index: 100;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -307,7 +299,7 @@ export const ProBox = styled.div`
     transform: translate(50%, -145%) rotate(-45deg); // -52.5
   }
   &:nth-child(4) {
-    transform: translate(2.5%, -172.5%) rotate(-67.5deg); // -52.5% -22.5%
+    transform: translate(5.5%, -178.5%) rotate(-67.5deg); // -52.5% -22.5%
   }
   &:nth-child(5) {
     transform: translate(-50%, -187.5%) rotate(-90deg); // +52.5
@@ -349,10 +341,6 @@ export const ProBox = styled.div`
   @media (max-width: ${media.tablet}) {
     width: 350px;
     height: 350px;
-  }
-  @media (max-width: 550px) {
-    width: 200px;
-    height: 200px;
   }
 `;
 
