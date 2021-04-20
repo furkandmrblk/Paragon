@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   MainBox,
+  MobileInnerSliderDiv,
   MobileItemDiv,
   MobileSliderDiv,
   Nav,
@@ -70,6 +71,44 @@ export const Navbar = (props) => {
         mainBox.setAttribute('style', 'transform: rotate(' + counter + 'deg)');
       }
     });
+
+    // Mobile Slider
+    const mobileSlider = document.getElementById('mobileSlider');
+    const mobileInnerSlider = document.getElementById('mobileInnerSlider');
+
+    let pressed = false;
+    let startY;
+    let y;
+
+    mobileSlider.addEventListener('touchstart', (e) => {
+      pressed = true;
+      e.offsetY = e.touches[0].pageY - e.touches[0].target.offsetTop;
+      startY = e.offsetY - mobileInnerSlider.offsetTop;
+    });
+    window.addEventListener('touchend', () => {
+      pressed = false;
+    });
+    mobileSlider.addEventListener('touchmove', (e) => {
+      if (!pressed) return;
+      e.preventDefault();
+      e.offsetY = e.touches[0].pageY - e.touches[0].target.offsetTop;
+      y = e.offsetY;
+
+      mobileInnerSlider.style.top = `${y - startY}px`;
+
+      // checkBoundary();
+    });
+
+    function checkBoundary() {
+      let outer = mobileSlider.getBoundingClientRect();
+      let inner = mobileInnerSlider.getBoundingClientRect();
+
+      if (parseInt(mobileInnerSlider.style.top) > 0) {
+        mobileInnerSlider.style.top = '0px';
+      } else if (inner.bottom < outer.bottom) {
+        mobileInnerSlider.style.top = `-${inner.height - outer.height}px`;
+      }
+    }
   });
 
   const openMenu = () => {
@@ -101,15 +140,17 @@ export const Navbar = (props) => {
               </ProBox>
             ))}
           </MainBox>
-          <MobileSliderDiv>
-            {titles.map((title) => (
-              <Link href={'/work/' + title.fields.slug} key={title.sys.id}>
-                <MobileItemDiv onClick={openDelayMenu}>
-                  <NavItem>{title.fields.title}</NavItem>
-                  <NavNumber>{title.fields.projectNumber}</NavNumber>
-                </MobileItemDiv>
-              </Link>
-            ))}
+          <MobileSliderDiv id="mobileSlider">
+            <MobileInnerSliderDiv id="mobileInnerSlider">
+              {titles.map((title) => (
+                <Link href={'/work/' + title.fields.slug} key={title.sys.id}>
+                  <MobileItemDiv onClick={openDelayMenu}>
+                    <NavItem>{title.fields.title}</NavItem>
+                    <NavNumber>{title.fields.projectNumber}</NavNumber>
+                  </MobileItemDiv>
+                </Link>
+              ))}
+            </MobileInnerSliderDiv>
           </MobileSliderDiv>
         </NavMenuLeft>
         <NavMenuRight>

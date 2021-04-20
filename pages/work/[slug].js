@@ -38,12 +38,40 @@ export default function Post({ posts, post }) {
           src={'https:' + data.mainImage.fields.file.url}
           alt="MainImage"
         />
-        <ProjectMainText>{data.mainText}</ProjectMainText>
+        <ProjectMainText>
+          {data.mainText
+            .replace(/\\n/g, ' ')
+            .split('\n')
+            .map((t, i) =>
+              i > 0 ? (
+                <span key={i}>
+                  <br />
+                  {t}
+                </span>
+              ) : (
+                t
+              )
+            )}
+        </ProjectMainText>
         <ProjectBottomContainer>
           {data.textOne && (
             <>
               <ProjectBottomDiv>
-                <ProjectText>{data.textOne}</ProjectText>
+                <ProjectText>
+                  {data.textOne
+                    .replace(/\\n/g, ' ')
+                    .split('\n')
+                    .map((t, i) =>
+                      i > 0 ? (
+                        <span key={i}>
+                          <br />
+                          {t}
+                        </span>
+                      ) : (
+                        t
+                      )
+                    )}
+                </ProjectText>
                 <ProjectImage
                   src={'https:' + data.imageOne.fields.file.url}
                   alt="ImageOne"
@@ -60,7 +88,21 @@ export default function Post({ posts, post }) {
                   src={'https:' + data.imageTwo.fields.file.url}
                   alt="ImageTwo"
                 />
-                <ProjectText>{data.textTwo}</ProjectText>
+                <ProjectText>
+                  {data.textTwo
+                    .replace(/\\n/g, ' ')
+                    .split('\n')
+                    .map((t, i) =>
+                      i > 0 ? (
+                        <span key={i}>
+                          <br />
+                          {t}
+                        </span>
+                      ) : (
+                        t
+                      )
+                    )}
+                </ProjectText>
                 <ProjectImageBGLeft />
               </ProjectBottomDiv>{' '}
             </>
@@ -69,7 +111,21 @@ export default function Post({ posts, post }) {
           {data.textThree && (
             <>
               <ProjectBottomDiv>
-                <ProjectText>{data.textThree}</ProjectText>
+                <ProjectText>
+                  {data.textThree
+                    .replace(/\\n/g, ' ')
+                    .split('\n')
+                    .map((t, i) =>
+                      i > 0 ? (
+                        <span key={i}>
+                          <br />
+                          {t}
+                        </span>
+                      ) : (
+                        t
+                      )
+                    )}
+                </ProjectText>
                 <ProjectImage
                   src={'https:' + data.imageThree.fields.file.url}
                   alt="ImageThree"

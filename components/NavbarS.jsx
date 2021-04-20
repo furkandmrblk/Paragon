@@ -88,8 +88,6 @@ export const NavMenuLeft = styled.div`
   @media (max-width: ${media.tablet}) {
     position: relative;
     align-items: center;
-
-    padding-top: 1rem;
   }
 `;
 
@@ -349,13 +347,35 @@ export const ProBox = styled.div`
 export const MobileSliderDiv = styled.div`
   display: none;
   @media (max-width: ${media.tablet}) {
+    position: absolute;
+    top: 0;
+
+    height: 75vh;
+    width: 50vw;
+
+    display: flex;
+    align-items: flex-start;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    margin-top: 10rem;
+  }
+`;
+
+export const MobileInnerSliderDiv = styled.div`
+  display: none;
+  @media (max-width: ${media.tablet}) {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: flex-start;
     color: ${color.$white};
 
-    /* overflow: hidden; */
     white-space: nowrap;
   }
 `;
